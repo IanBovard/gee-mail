@@ -1,0 +1,57 @@
+#overlay{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left:0;
+	top:0;
+	z-index: 10;
+}
+#main{
+	overflow: scroll;
+	width: : 100%;
+	height: 100%;
+	left:0;
+	top:0;
+}
+.sender{
+	position: relative;
+	background-color: lightblue;
+	z-index: 11;
+}
+.sender:hover{
+	background-color: lightpink;
+
+}
+.subject{
+	background-color: lightyellow;
+
+}
+.body{
+	background-color: lightpink
+
+}
+
+.date{
+	background-color: lightyellow;
+}
+.newSender{
+	position: relative;
+	background-color: lightblue;
+	z-index: 11;
+}
+.newSender:hover{
+	background-color: lightpink;
+
+}
+.newSubject{
+	background-color: lightyellow;
+
+}
+.newBody{
+	background-color: lightpink
+
+}
+
+.newDate{
+	background-color: lightyellow;
+}
