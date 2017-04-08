@@ -4,15 +4,113 @@
 		<link href="css/style.css" rel="stylesheet" media="screen">
     <script>
       window.onload = function(){
-        // ALL OF YOUR JAVASCRIPT CODE SHOULD GO HERE. 
-        // We have to use window.onload so your JavaScript doesn't execute until the page has loaded and all HTML has been downloaded to your browser
-        
+        function emailSubject(){
+        	for (var i=0; i<window.geemails.length; i++){
+
+        		var emailBox = document.createElement("div");
+        		emailBox.className = "emails";
+        		main.appendChild(emailBox);
+        		emailBox.addEventListener("click", bodyToggle);
+                console.log(emailBox);
+
+
+        		var printSender = document.createElement("div");
+        		printSender.className = "sender";
+        		printSender.innerHTML = "Sender: " + sender[i];
+        		emailBox.appendChild(printSender);
+        		console.log(printSender);
+
+        		var printSubject = document.createElement("div");
+        		printSubject.className = "subject";
+        		printSubject.innerHTML = "Subject: " + subject[i];
+        		emailBox.appendChild(printSubject);
+        		console.log(printSubject);
+
+                var printDate = document.createElement("div");
+                printDate.className = "date";
+                printDate.innerHTML = "Date: " + getRandomDate();
+                emailBox.appendChild(printDate);
+                console.log(printDate);
+
+        		var printBody = document.createElement("div");
+        		printBody.className = "body";
+        		printBody.innerHTML = "Body: " + body[i];
+        		printBody.style.display = "none";
+        		emailBox.appendChild(printBody);
+        		console.log(body);
+
+
+        }
+
+        }
+          emailSubject();
+
+            function bodyToggle(){
+    var showBody = this.querySelectorAll('.body')[0];
+    console.log(this);
+    if(showBody.style.display === 'none'){
+      showBody.style.display = 'block';
+    }else{
+      showBody.style.display = 'none';
+    }
+  }
+setInterval(newMessage, 5000);
+var x = 0;
+function newMessage(){
+
+                 var getMessage = getNewMessage();
+                 var newEmailBox = document.createElement("div");
+                newEmailBox.className = "newEmails";
+                main.appendChild(newEmailBox);
+                newEmailBox.addEventListener("click",newBodyToggle);
+                console.log(newEmailBox);
+
+
+                var newPrintSender = document.createElement("div");
+                newPrintSender.className = "newSender";
+                newPrintSender.innerHTML = "Sender: " + getMessage.sender;
+                newEmailBox.appendChild(newPrintSender);
+                console.log(newPrintSender);
+
+                var newPrintSubject = document.createElement("div");
+                newPrintSubject.className = "newSubject";
+                newPrintSubject.innerHTML = "Subject: " + getMessage.subject;
+                newEmailBox.appendChild(newPrintSubject);
+                console.log(newPrintSubject);
+
+                var newPrintDate = document.createElement("div");
+                newPrintDate.className = "newDate";
+                newPrintDate.innerHTML = "Date: " + getRandomDate();
+                newEmailBox.appendChild(newPrintDate);
+                console.log(newPrintDate);
+
+                var newPrintBody = document.createElement("div");
+                newPrintBody.className = "newBody";
+                newPrintBody.innerHTML = "Body: " + getMessage.body;
+                newPrintBody.style.display = "none";
+                newEmailBox.appendChild(newPrintBody);
+                console.log(newPrintBody);
+
+                var emailCounter = document.getElementById("counter");
+                emailCounter.innerHTML = "New Emails: " + geemails.length++;
+
+        }
+        function newBodyToggle(){
+    var newShowBody = this.querySelectorAll('.newbody')[0];
+    console.log(this);
+    if(newShowBody.style.display === 'none'){
+      newShowBody.style.display = 'block';
+    }else{
+      newShowBody.style.display = 'none';
+    }
+  }
       };
     </script>
 	</head>
 	<body>
-		<div class="container" id="main">
-			Build Me!
-		</div>
+	<title>Aw Gee! Mail</title>
+        <div class="container" id="counter"></div>
+        <div id="overlay"></div>  
+		<div class="container" id="main"></div>
 	</body>
 </html>
