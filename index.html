@@ -54,8 +54,10 @@
       showBody.style.display = 'none';
     }
   }
-setInterval(newMessage, 5000);
-var x = 0;
+    setInterval(newMessage, 5000);
+    var x = 1;
+     var emailCounter = document.getElementById("counter");
+    emailCounter.innerHTML = "New Emails: " + "0";
 function newMessage(){
 
                  var getMessage = getNewMessage();
@@ -91,8 +93,8 @@ function newMessage(){
                 newEmailBox.appendChild(newPrintBody);
                 console.log(newPrintBody);
 
-                var emailCounter = document.getElementById("counter");
-                emailCounter.innerHTML = "New Emails: " + geemails.length++;
+            
+                emailCounter.innerHTML = "New Emails: " + x++;
 
         }
         function newBodyToggle(){
