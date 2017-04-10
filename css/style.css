@@ -1,6 +1,6 @@
 #overlay{
 	position: absolute;
-	width: 100%;
+	width: 97%;
 	height: 100%;
 	left:0;
 	top:0;
@@ -12,6 +12,13 @@
 	height: 90%;
 	left:0;
 	top:0;
+}
+#total{
+	float: left;
+	margin-right: 10px;
+}
+#title{
+	margin-bottom: 5px;
 }
 .sender{
 	position: relative;
