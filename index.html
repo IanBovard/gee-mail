@@ -55,10 +55,17 @@
     }
   }
     setInterval(newMessage, 5000);
-    var x = 1;
+    var x = 0;
+     var totalEmails = document.getElementById("total");
+     totalEmails.innerHTML = "Inbox: " + geemails.length;
      var emailCounter = document.getElementById("counter");
-    emailCounter.innerHTML = "New Emails: " + "0";
+    emailCounter.innerHTML = "New Emails: " + x;
+
 function newMessage(){
+
+                emailCounter.innerHTML = "New Emails: " + ++x;
+                totalEmails.innerHTML = "Inbox: " + ++geemails.length;
+
 
                  var getMessage = getNewMessage();
                  var newEmailBox = document.createElement("div");
@@ -93,9 +100,6 @@ function newMessage(){
                 newEmailBox.appendChild(newPrintBody);
                 console.log(newPrintBody);
 
-            
-                emailCounter.innerHTML = "New Emails: " + x++;
-
         }
         function newBodyToggle(){
     var newShowBody = this.querySelectorAll('.newbody')[0];
@@ -111,6 +115,8 @@ function newMessage(){
 	</head>
 	<body>
 	<title>Aw Gee! Mail</title>
+    <h1 id="title">Aww Gee! Mail</h1>
+        <div class="container" id="total"></div>
         <div class="container" id="counter"></div>
         <div id="overlay"></div>  
 		<div class="container" id="main"></div>
