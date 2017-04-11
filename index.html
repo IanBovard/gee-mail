@@ -16,13 +16,13 @@
 
         		var printSender = document.createElement("div");
         		printSender.className = "sender";
-        		printSender.innerHTML = "Sender: " + sender[i];
+        		printSender.innerHTML = "Sender: " + geemails[i].sender;
         		emailBox.appendChild(printSender);
         		console.log(printSender);
 
         		var printSubject = document.createElement("div");
         		printSubject.className = "subject";
-        		printSubject.innerHTML = "Subject: " + subject[i];
+        		printSubject.innerHTML = "Subject: " + geemails[i].subject;
         		emailBox.appendChild(printSubject);
         		console.log(printSubject);
 
@@ -34,7 +34,7 @@
 
         		var printBody = document.createElement("div");
         		printBody.className = "body";
-        		printBody.innerHTML = "Body: " + body[i];
+        		printBody.innerHTML = "Body: " + geemails[i].body;
         		printBody.style.display = "none";
         		emailBox.appendChild(printBody);
         		console.log(body);
