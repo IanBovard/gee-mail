@@ -28,7 +28,7 @@
 
                 var printDate = document.createElement("div");
                 printDate.className = "date";
-                printDate.innerHTML = "Date: " + getRandomDate();
+                printDate.innerHTML = "Date: " + geemails[i].date;
                 emailBox.appendChild(printDate);
                 console.log(printDate);
 
@@ -89,7 +89,7 @@ function newMessage(){
 
                 var newPrintDate = document.createElement("div");
                 newPrintDate.className = "newDate";
-                newPrintDate.innerHTML = "Date: " + getRandomDate();
+                newPrintDate.innerHTML = "Date: " + getMessage.date;
                 newEmailBox.appendChild(newPrintDate);
                 console.log(newPrintDate);
 
